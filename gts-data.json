@@ -1,0 +1,40 @@
+{ 
+  "name": "gts-root",
+  "children": [
+    {
+      "name": "period_1",
+      "type": "period",
+      "duration": "10",
+      "children": [
+        {
+          "name": "epoch_1_a",
+          "type": "epoch",
+          "duration": "6",
+          "children": [
+            {
+              "name": "age_1_a_1",
+              "type": "age",
+              "duration": "3.5"
+            },
+            {
+             "name": "age_1_a_2",
+             "type": "age",
+             "duration": "2.5"
+           }
+          ]
+        },
+        {
+          "name": "epoch_1_b",
+          "type": "epoch",
+          "duration": "4"
+        }
+      ]
+   
+     },
+     {
+       "name": "period_2",
+       "type": "period",
+       "duration": "5"
+     }
+  ]
+}
