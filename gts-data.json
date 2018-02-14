@@ -12,6 +12,9 @@
           "type": "period",
           "start": "2.588",
           "end": null,
+          "oxygen": "20.8",
+          "carbondioxide": "250",
+          "temperature": "14",
           "children": [
             {
               "name": "Holocene",
@@ -32,6 +35,9 @@
           "type": "period",
           "start": "23.03",
           "end": "2.588",
+          "oxygen": "21.5",
+          "carbondioxide": "280",
+          "temperature": "14",
           "children": [
             {
               "name": "Pliocene",
@@ -52,6 +58,9 @@
           "type": "period",
           "start": "65.5",
           "end": "23.03",
+          "oxygen": "26.0",
+          "carbondioxide": "500",
+          "temperature": "18",
           "children": [
             {
               "name": "Oligocene",
@@ -86,6 +95,9 @@
           "type": "period",
           "start": "145.5",
           "end": "65.5",
+          "oxygen": "30",
+          "carbondioxide": "1700",
+          "temperature": "18",
           "children": [
             {
               "name": "Late",
@@ -106,6 +118,9 @@
           "type": "period",
           "start": "199.6",
           "end": "145.5",
+          "oxygen": "26",
+          "carbondioxide": "1950",
+          "temperature": "16.5",
           "children": [
             {
               "name": "Late",
@@ -132,6 +147,9 @@
           "type": "period",
           "start": "251.0",
           "end": "199.6",
+          "oxygen": "16",
+          "carbondioxide": "1750",
+          "temperature": "17",
           "children": [
             {
               "name": "Late",
@@ -166,6 +184,9 @@
           "type": "period",
           "start": "299.0",
           "end": "251.0",
+          "oxygen": "23",
+          "carbondioxide": "900",
+          "temperature": "16",
           "children": [
             {
               "name": "Lopingian",
@@ -192,6 +213,9 @@
           "type": "period",
           "start": "359.2",
           "end": "299.0",
+          "oxygen": "32.3",
+          "carbondioxide": "800",
+          "temperature": "14",
           "children": [
             {
               "name": "Pennsylvanian",
@@ -212,6 +236,9 @@
           "type": "period",
           "start": "416.0",
           "end": "359.2",
+          "oxygen": "15",
+          "carbondioxide": "2200",
+          "temperature": "20",
           "children": [
             {
               "name": "Late",
@@ -238,6 +265,9 @@
           "type": "period",
           "start": "443.7",
           "end": "416.0",
+          "oxygen": "14",
+          "carbondioxide": "4500",
+          "temperature": "17",
           "children": [
             {
               "name": "Pridoli",
@@ -270,6 +300,9 @@
           "type": "period",
           "start": "488.3",
           "end": "443.7",
+          "oxygen": "13.5",
+          "carbondioxide": "4200",
+          "temperature": "16",
           "children": [
             {
               "name": "Late",
@@ -296,6 +329,9 @@
           "type": "period",
           "start": "542.0",
           "end": "488.3",
+          "oxygen": "12.5",
+          "carbondioxide": "4500",
+          "temperature": "21",
           "children": [
             {
               "name": "Furongian",
