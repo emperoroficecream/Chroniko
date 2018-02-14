@@ -2,39 +2,328 @@
   "name": "gts-root",
   "children": [
     {
-      "name": "period_1",
-      "type": "period",
-      "duration": "10",
+      "name": "Cenozoic",
+      "type": "era",
+      "start": "65.5",
+      "end": null,
       "children": [
         {
-          "name": "epoch_1_a",
-          "type": "epoch",
-          "duration": "6",
+          "name": "Quaternary",
+          "type": "period",
+          "start": "2.588",
+          "end": null,
           "children": [
             {
-              "name": "age_1_a_1",
-              "type": "age",
-              "duration": "3.5"
+              "name": "Holocene",
+              "type": "epoch",
+              "start": "0.0117",
+              "end": null
             },
             {
-             "name": "age_1_a_2",
-             "type": "age",
-             "duration": "2.5"
-           }
+              "name": "Pleistocene",
+              "type": "epoch",
+              "start": "2.588",
+              "end": "0.0117"
+            }
           ]
         },
         {
-          "name": "epoch_1_b",
-          "type": "epoch",
-          "duration": "4"
+          "name": "Neogene",
+          "type": "period",
+          "start": "23.03",
+          "end": "2.588",
+          "children": [
+            {
+              "name": "Pliocene",
+              "type": "epoch",
+              "start": "5.332",
+              "end": "2.588"
+            },
+            {
+              "name": "Miocene",
+              "type": "epoch",
+              "start": "23.03",
+              "end": "5.332"
+            }
+          ]
+        },
+        {
+          "name": "Paleogene",
+          "type": "period",
+          "start": "65.5",
+          "end": "23.03",
+          "children": [
+            {
+              "name": "Oligocene",
+              "type": "epoch",
+              "start": "33.9",
+              "end": "23.03"
+            },
+            {
+              "name": "Eocene",
+              "type": "epoch",
+              "start": "55.8",
+              "end": "33.9"
+            },
+            {
+              "name": "Paleocene",
+              "type": "epoch",
+              "start": "65.5",
+              "end": "55.8"
+            }
+          ]
         }
       ]
-   
      },
      {
-       "name": "period_2",
-       "type": "period",
-       "duration": "5"
+      "name": "Mesozoic",
+      "type": "era",
+      "start": "251.0",
+      "end": "65.5",
+      "children": [
+        {
+          "name": "Cretaceous",
+          "type": "period",
+          "start": "145.5",
+          "end": "65.5",
+          "children": [
+            {
+              "name": "Late",
+              "type": "epoch",
+              "start": "99.6",
+              "end": "65.5"
+            },
+            {
+              "name": "Early",
+              "type": "epoch",
+              "start": "145.5",
+              "end": "99.6"
+            }
+          ]
+        },
+        {
+          "name": "Jurassic",
+          "type": "period",
+          "start": "199.6",
+          "end": "145.5",
+          "children": [
+            {
+              "name": "Late",
+              "type": "epoch",
+              "start": "161.2",
+              "end": "145.5"
+            },
+            {
+              "name": "Middle",
+              "type": "epoch",
+              "start": "175.6",
+              "end": "161.2"
+            },
+            {
+              "name": "Early",
+              "type": "epoch",
+              "start": "199.6",
+              "end": "175.6"
+            }
+          ]
+        },
+        {
+          "name": "Triassic",
+          "type": "period",
+          "start": "251.0",
+          "end": "199.6",
+          "children": [
+            {
+              "name": "Late",
+              "type": "epoch",
+              "start": "228.7",
+              "end": "199.6"
+            },
+            {
+              "name": "Middle",
+              "type": "epoch",
+              "start": "245.9",
+              "end": "228.7"
+            },
+            {
+              "name": "Early",
+              "type": "epoch",
+              "start": "251.0",
+              "end": "245.9"
+            }
+          ]
+        }
+      ]
+     },
+     {
+      "name": "Paleozoic",
+      "type": "era",
+      "start": "542.0",
+      "end": "251.0",
+      "children": [
+        {
+          "name": "Permian",
+          "type": "period",
+          "start": "299.0",
+          "end": "251.0",
+          "children": [
+            {
+              "name": "Lopingian",
+              "type": "epoch",
+              "start": "260.4",
+              "end": "251.0"
+            },
+            {
+              "name": "Guadalupian",
+              "type": "epoch",
+              "start": "270.6",
+              "end": "260.4"
+            },
+            {
+              "name": "Cisuralian",
+              "type": "epoch",
+              "start": "299.0",
+              "end": "270.6"
+            }
+          ]
+        },
+        {
+          "name": "Carboniferous",
+          "type": "period",
+          "start": "359.2",
+          "end": "299.0",
+          "children": [
+            {
+              "name": "Pennsylvanian",
+              "type": "epoch",
+              "start": "318.1",
+              "end": "299.0"
+            },
+            {
+              "name": "Mississippian",
+              "type": "epoch",
+              "start": "359.2",
+              "end": "318.1"
+            }
+          ]
+        },
+        {
+          "name": "Devonian",
+          "type": "period",
+          "start": "416.0",
+          "end": "359.2",
+          "children": [
+            {
+              "name": "Late",
+              "type": "epoch",
+              "start": "385.3",
+              "end": "359.2"
+            },
+            {
+              "name": "Middle",
+              "type": "epoch",
+              "start": "397.5",
+              "end": "385.3"
+            },
+            {
+              "name": "Early",
+              "type": "epoch",
+              "start": "416.0",
+              "end": "397.5"
+            }
+          ]
+        },
+        {
+          "name": "Silurian",
+          "type": "period",
+          "start": "443.7",
+          "end": "416.0",
+          "children": [
+            {
+              "name": "Pridoli",
+              "type": "epoch",
+              "start": "418.7",
+              "end": "416.0"
+            },
+            {
+              "name": "Ludlow",
+              "type": "epoch",
+              "start": "422.9",
+              "end": "418.7"
+            },
+            {
+              "name": "Wenlock",
+              "type": "epoch",
+              "start": "428.2",
+              "end": "422.9"
+            },
+            {
+              "name": "Llandovery",
+              "type": "epoch",
+              "start": "443.7",
+              "end": "428.2"
+            }
+          ]
+        },
+        {
+          "name": "Ordovician",
+          "type": "period",
+          "start": "488.3",
+          "end": "443.7",
+          "children": [
+            {
+              "name": "Late",
+              "type": "epoch",
+              "start": "460.9",
+              "end": "443.7"
+            },
+            {
+              "name": "Middle",
+              "type": "epoch",
+              "start": "471.8",
+              "end": "460.9"
+            },
+            {
+              "name": "Early",
+              "type": "epoch",
+              "start": "488.3",
+              "end": "471.8"
+            }
+          ]
+        },
+        {
+          "name": "Cambrian",
+          "type": "period",
+          "start": "542.0",
+          "end": "488.3",
+          "children": [
+            {
+              "name": "Furongian",
+              "type": "epoch",
+              "start": "499.0",
+              "end": "488.3"
+            },
+            {
+              "name": "Series 3",
+              "type": "epoch",
+              "start": "510.0",
+              "end": "499.0"
+            },
+            {
+              "name": "Series 2",
+              "type": "epoch",
+              "start": "521.0",
+              "end": "510.0"
+            },
+            {
+              "name": "Terreneuvian",
+              "type": "epoch",
+              "start": "542.0",
+              "end": "521.0"
+            }
+          ]
+        }
+      ]
      }
   ]
 }
