@@ -18,10 +18,29 @@
         right: 10px;
         top: 10px;
       }
+
+      #controls .metric {
+        cursor: pointer
+      }
+
+      .active {
+        text-decoration: underline
+      }
       </style>
+      <script
+      src="http://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"></script>
       <script src="//d3js.org/d3.v3.min.js"></script>
   </head>
   <body>
+    <div id="controls">
+      <ul>
+        <li class ="metric active" data-metric="temperature">Temperature</li>
+        <li class ="metric" data-metric="oxygen">Mean atmospheric O<sub>2</sub> content over period duration</li>
+        <li class ="metric" data-metric="carbondioxide">Mean atmospheric CO<sub>2</sub> content over period duration</li>
+      </ul>
+    </div>
     <div class="gts-chart"></div>
     <script src="/main.js"></script>
   </body>

@@ -1,7 +1,34 @@
-var width = 960,
-    height = 700,
+(function() {
+  // Toggle active states of controls
+  var $metrics = $('#controls .metric');
+  $metrics.click(function() {
+    var $clicked = $(this);
+    $metrics.removeClass('active');
+    $clicked.addClass('active');
+    var selectedMetric = $clicked.data('metric');
+    console.log('selectedMetric', selectedMetric);
+    redraw(svg, selectedMetric);
+  })
+})();
+
+
+var width = window.innerWidth,
+    height = window.innerHeight,
     radius = Math.min(width, height) / 2,
     color = d3.scale.category20c();
+
+
+var redraw = function(svg, metric) {
+  var newArc = getArc(metric);
+  svg.selectAll('g g path')
+    .transition()
+    .duration(800)
+    .attr('d', newArc);
+}
+
+/* setTimeout(function() {
+  redraw(svg, 'oxygen');
+}, 2000); */
 
 var svg = d3.select("body").append("svg")
     .attr("width", width)
@@ -12,21 +39,54 @@ var svg = d3.select("body").append("svg")
 var partition = d3.layout.partition()
     .sort(null)
     .size([2 * Math.PI, radius * radius])
-    .value(function(d) { return +d.duration; });
+    .value(function(d) { return (+d.start) - +(d.end); });
 
-var arc = d3.svg.arc()
+var getOuterRadiusForTemperature = function(d) {
+  const modernTemperature = 14.0;
+  return (+d.parent.temperature - modernTemperature)*5000;
+}
+
+var getOuterRadiusForOxygen = function(d) {
+  const modernOxygen = 20.0;
+  return Math.abs(+d.parent.oxygen - modernOxygen)*5000;
+}
+
+var getOuterRadiusForCarbondioxide = function(d) {
+  const modernCarbondioxide = 250;
+  return Math.abs(+d.parent.carbondioxide - modernCarbondioxide)*10;
+}
+
+var getOuterRadiusForMetric = function(metric, d) {
+  if (metric === 'temperature') {
+    return getOuterRadiusForTemperature(d);
+  } else if (metric === 'oxygen') {
+    return getOuterRadiusForOxygen(d);
+  } else if (metric === 'carbondioxide') {
+    return getOuterRadiusForCarbondioxide(d);
+  }
+}
+
+var getArc = function(metric) {
+  metric = metric || 'temperature';
+  var arc = d3.svg.arc()
     .startAngle(function(d) { return d.x; })
     .endAngle(function(d) { return d.x + d.dx; })
-    .innerRadius(function(d) { return Math.sqrt(d.y); })
+    .innerRadius(function(d) { 
+      return Math.sqrt(d.y * 0.1); 
+    })
     .outerRadius(function(d) { 
       var result;
-      if (true) {
-        result = Math.sqrt(d.y + d.dy);
+      if (d.type === 'epoch') {
+        result = Math.sqrt(d.y * 0.1 + d.dy * 0.1 + getOuterRadiusForMetric(metric, d));
       } else {
-        result = Math.sqrt(d.y + d.value*10000); // Leaf node
+        result = Math.sqrt(d.y * 0.1 + d.dy * 0.1);
       }
       return result;
     });
+  return arc;
+};
+
+
 
 d3.json("gts-data.json", function(error, root) {
   if (error) throw error;
@@ -37,15 +97,15 @@ d3.json("gts-data.json", function(error, root) {
 
     nodes.append("path")
         .attr("display", function(d) { return d.depth ? null : "none"; }) // hide inner ring
-        .attr("d", arc)
+        .attr("d", getArc())
         .style("stroke", "#fff")
         .style("fill", function(d) { return color((d.children ? d : d.parent).name); })
         .style("fill-rule", "evenodd")
         .each(stash);
-    nodes.append("text")
+/*     nodes.append("text")
       .attr("x", function(d) { return d.depth - 3; })
       .attr("y", function(d) { return d.depth - 3; })
-      .text(function(d) { return d.name; });
+      .text(function(d) { return d.name; }); */
 
 
   d3.selectAll("input").on("change", function change() {
