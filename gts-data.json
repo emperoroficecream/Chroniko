@@ -1,5 +1,5 @@
 { 
-  "name": "gts-root",
+  "name": "root",
   "children": [
     {
       "name": "Cenozoic",

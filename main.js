@@ -26,15 +26,24 @@ var redraw = function(svg, metric) {
     .attr('d', newArc);
 }
 
-/* setTimeout(function() {
-  redraw(svg, 'oxygen');
-}, 2000); */
+var tip = d3.tip()
+  .attr('class', 'd3-tip')
+  .offset([-10, 0])
+  .html(function(d) {
+    var str = '';
+    str += d.parent && d.parent.name !== 'root' ? d.parent.name + ' > ' : '';
+    str += d.name;
+
+    return "<span>" +  str + "</span>";
+  });
 
 var svg = d3.select("body").append("svg")
     .attr("width", width)
     .attr("height", height)
     .append("g")
     .attr("transform", "translate(" + width / 2 + "," + height * .52 + ")");
+
+svg.call(tip);
 
 var partition = d3.layout.partition()
     .sort(null)
@@ -98,6 +107,8 @@ d3.json("gts-data.json", function(error, root) {
     nodes.append("path")
         .attr("display", function(d) { return d.depth ? null : "none"; }) // hide inner ring
         .attr("d", getArc())
+        .on('mouseover', tip.show)
+        .on('mouseout', tip.hide)
         .style("stroke", "#fff")
         .style("fill", function(d) { return color((d.children ? d : d.parent).name); })
         .style("fill-rule", "evenodd")
