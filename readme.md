@@ -30,3 +30,7 @@ I choose sunburst on a whim, seeing [the wikepedia entry of geologic time scale]
 * Lack of chronological order. This graph is about how we label periods of time, which is oftne metaphorized as a path into physical space<sup>1</sup>. Sunbursts are good for hierarchical data, but not so good for hiearchical data with an emphasis on order.
 
 * Little room to add more events. Even time scale labels are hard to fit on the rings, not to mention other events such as temperature and oxygen changes, .etc.
+
+
+---
+ 1. ["Metaphors We Live By"](http://press.uchicago.edu/ucp/books/book/chicago/M/bo3637992.html)
