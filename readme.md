@@ -12,14 +12,14 @@ Purpose: make a graph that is easy to explore the geologic time scale, some defi
 
 ## Iteration 1: Sunburst version
 
-<figure>
+<figure style="text-align:center">
   <img src="images/iteration-1.png" width="300" height="300">
   <figcaption>Iteration 1</figcaption>
 </figure>
 
-<figure>
+<figure style="text-align:center">
   <img src="https://upload.wikimedia.org/wikipedia/commons/7/77/Geologic_Clock_with_events_and_periods.svg" width="300" height="300">
-  <figcaption>Wikipedia geologic time scale clock</figcaption>
+  <figcaption style="align:middle">Wikipedia geologic time scale clock</figcaption>
 </figure>
 
 
